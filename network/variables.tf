@@ -73,4 +73,3 @@ variable "instance_key" {
     name = ""
   }
 }
-

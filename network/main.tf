@@ -10,7 +10,6 @@ resource "aws_vpc" "vpc" {
   tags = {
     Name = "${var.stack_name}_vpc"
   }
-
 }
 
 resource "aws_subnet" "public_subnet" {
@@ -98,4 +97,3 @@ resource "aws_instance" "ec2_instance" {
   instance_type = "${var.test_server["instance_type"]}"
   ami           = "${var.test_server["ami"]}"
 }
-
