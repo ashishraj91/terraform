@@ -77,11 +77,11 @@ resource "aws_security_group_rule" "allow_outbound_all" {
 }
 
 resource "aws_instance" "ec2_instance" {
-  subnet_id               = "${aws_subnet.public_subnet.id}"
-  vpc_security_group_ids  = ["${aws_security_group.base_sg.id}"]
-  key_name                = "${var.key_name}"
-  count                   = 1
-  source_dest_check       = "false"
+  subnet_id              = "${aws_subnet.public_subnet.id}"
+  vpc_security_group_ids = ["${aws_security_group.base_sg.id}"]
+  key_name               = "${var.key_name}"
+  count                  = 1
+  source_dest_check      = "false"
 
   root_block_device {
     volume_type           = "${var.test_server["type"]}"
