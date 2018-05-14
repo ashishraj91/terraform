@@ -82,7 +82,6 @@ resource "aws_instance" "ec2_instance" {
   key_name                = "${var.key_name}"
   count                   = 1
   source_dest_check       = "false"
-  disable_api_termination = "true"
 
   root_block_device {
     volume_type           = "${var.test_server["type"]}"
